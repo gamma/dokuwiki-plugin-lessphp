@@ -1,0 +1,9 @@
+# General Plugin Info do not edit
+
+base   lessphp
+author i-net software
+email  tools@inetsoftware.de
+date   2014-19-09
+name   LessPHP
+desc   Drop-in replacement for the bundled less.inc.php using http://lessphp.gpeasy.com 
+url    https://www.dokuwiki.org/plugin:lessphp
