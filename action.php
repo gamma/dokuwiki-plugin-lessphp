@@ -31,7 +31,15 @@ class action_plugin_lessphp extends DokuWiki_Action_Plugin {
             return;
         }
 		
+		$lessInc = dirname(__FILE__) . '/inc/lessc.inc.php';
+		if ( !file_exists($lessInc) ) {
+    		system("git submodule init " . dirname(__FILE__) );
+    		system("git submodule update " . dirname(__FILE__) );
+		}
+		
 		// If this is a call for css.php include the other library
-		require_once(dirname(__FILE__) . '/inc/lessc.inc.php');
+		if ( file_exists($lessInc) ) {
+    		require_once( $lessInc );
+        }
 	}
 }
